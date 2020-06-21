@@ -13,6 +13,10 @@ export default function ContentItem({
 
   totalJuros > 0 ? (color1 = '#43a047') : (color1 = '#f44336 ');
   totalJuros > 0 ? (color2 = '#039be5 ') : (color2 = '#ef6c00 ');
+  if (totalJuros > 0) {
+    lucroTotal = '+' + lucroTotal;
+  }
+
   return (
     <div className="card">
       <div className="card-content">
@@ -25,7 +29,7 @@ export default function ContentItem({
               <strong>{capitalAtual}</strong>
             </div>
             <div style={{ color: color1 }}>
-              <strong>+{lucroTotal}</strong>
+              <strong>{lucroTotal}</strong>
             </div>
             <div style={{ color: color2 }}>{totalJuros}%</div>
           </div>
