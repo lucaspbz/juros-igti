@@ -8,7 +8,7 @@ export default function ContentContainer({ parcelas }) {
     <div className="row ">
       {parcelas.map(({ capitalAtual, lucroTotal, totalJuros, mes }) => {
         return (
-          <div className="col s8 m3 l2 " key={mes}>
+          <div className="col s8 m4 l3 " key={mes}>
             <ContentItem
               mes={mes}
               capitalAtual={formatReal(capitalAtual)}
